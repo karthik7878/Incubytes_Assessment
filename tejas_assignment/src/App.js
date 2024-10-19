@@ -8,35 +8,38 @@ function App() {
   const [negativeNumbers, setNegativeNumbers] = useState([]);
 
   const add = (numbers) => {
-    // Check if the input is not empty
     if (numbers.trim() === "") {
-      setSum(0); // Set sum to 0 if input is empty
-      setException(""); // Clear any previous exception
+      setSum(0);
+      setException("");
       return;
     }
 
-    // Split by comma and process each number
-    const negativeNums = []; // Array to store negative numbers
-    const sumValue = numbers.split(',').reduce((acc, num) => {
-      const trimmedNum = num.trim();
-      const parsedNum = parseInt(trimmedNum, 10); // Trim whitespace and parse to integer
-      
-      // Check for negative numbers
-      if (parsedNum < 0) {
-        negativeNums.push(parsedNum);
-      }
+    const negativeNums = [];
+    let sumValue = 0;
 
-      return isNaN(parsedNum) ? acc : acc + parsedNum; // Ignore NaN values
-    }, 0);
+    const lines = numbers.split('\n');
+    lines.forEach(line => {
+      line.split(',').forEach(num => {
+        const trimmedNum = num.trim();
+        const parsedNum = parseInt(trimmedNum, 10);
 
-    // Check if there are any negative numbers and set exception
+        if (parsedNum < 0) {
+          negativeNums.push(parsedNum);
+        }
+
+        if (!isNaN(parsedNum)) {
+          sumValue += parsedNum;
+        }
+      });
+    });
+
     if (negativeNums.length > 0) {
       setNegativeNumbers(negativeNums);
       setException("Negative numbers not allowed: " + negativeNums.join(', '));
-      setSum(0); // Reset sum if there's an exception
+      setSum(0);
     } else {
-      setException(""); // Clear exception if no negative numbers
-      setSum(sumValue); // Set the sum if no negatives
+      setException("");
+      setSum(sumValue);
     }
   }
 
@@ -45,20 +48,28 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div>
-        <label>Input String</label>
-        <textarea 
-          id="textbox" 
-          value={inputString} 
-          onChange={handleChange} 
-          rows={4} 
-          cols={50}
-        />
-        <button onClick={() => add(inputString)}>Compute</button>
-        { exception ? 
-          <div style={{ color: 'red' }}>{exception}</div> : 
-          <span> Sum of the numbers is: {sum}</span>
+    <div className="App d-flex justify-content-center align-items-center" style={{height: '100vh'}}>
+      <div className="border p-4 bg-lightgoldenrodyellow" style={{ width: '400px', display: 'grid' }}>
+        <h5 className="text-center fs-4">Sum of Numbers in String</h5>
+        <div className="mb-3">
+          <label htmlFor="textbox" className="form-label">Input String</label>
+          <textarea 
+            id="textbox" 
+            className="form-control" 
+            value={inputString} 
+            onChange={handleChange} 
+            rows={4}
+          />
+        </div>
+        <button 
+          className="btn btn-primary" 
+          onClick={() => add(inputString)}
+        >
+          Compute
+        </button>
+        {exception ? 
+          <div className="alert alert-danger mt-3">{exception}</div> : 
+          <div className="mt-3">Sum of the numbers is: <strong>{sum}</strong></div>
         }
       </div>
     </div>
