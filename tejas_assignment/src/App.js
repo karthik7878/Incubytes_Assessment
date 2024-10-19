@@ -12,10 +12,7 @@ function App() {
       return;
     }
 
-    const lines = numbers.split('\n');
-    const allNumbers = lines.flatMap(line => line.split(','));
-
-    const sumValue = allNumbers.reduce((acc, num) => {
+    const sumValue = numbers.split(';').reduce((acc, num) => {
       const trimmedNum = num.trim();
       const parsedNum = parseInt(trimmedNum, 10); // Trim whitespace and parse to integer
       return isNaN(parsedNum) ? acc : acc + parsedNum; // Ignore NaN values
