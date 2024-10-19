@@ -12,11 +12,14 @@ function App() {
       return;
     }
 
-    const sumValue = numbers.split(",")
-      .reduce((acc, num) => {
-        const parsedNum = parseInt(num, 10);
-        return isNaN(parsedNum) ? acc : acc + parsedNum; // Ignore NaN values
-      }, 0);
+    const lines = numbers.split('\n');
+    const allNumbers = lines.flatMap(line => line.split(','));
+
+    const sumValue = allNumbers.reduce((acc, num) => {
+      const trimmedNum = num.trim();
+      const parsedNum = parseInt(trimmedNum, 10); // Trim whitespace and parse to integer
+      return isNaN(parsedNum) ? acc : acc + parsedNum; // Ignore NaN values
+    }, 0);
 
     setSum(sumValue);
   }
@@ -29,7 +32,13 @@ function App() {
     <div className="App">
       <div>
         <label>Input String</label>
-        <input type="text" id="textbox" value={inputString} onChange={handleChange} />
+        <textarea 
+          id="textbox" 
+          value={inputString} 
+          onChange={handleChange} 
+          rows={4} 
+          cols={50}
+        />
         <button onClick={() => add(inputString)}>Compute</button>
         <span> Sum of the numbers is: {sum}</span>
       </div>
