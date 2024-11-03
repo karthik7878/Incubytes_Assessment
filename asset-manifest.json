@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Tejas_Assessment/static/css/main.e6c13ad2.css",
-    "main.js": "/Tejas_Assessment/static/js/main.3e8bb869.js",
+    "main.css": "/Tejas_Assessment/static/css/main.40fa2f36.css",
+    "main.js": "/Tejas_Assessment/static/js/main.6e9647c1.js",
     "static/js/453.6cc2ae2c.chunk.js": "/Tejas_Assessment/static/js/453.6cc2ae2c.chunk.js",
+    "static/media/Main_BG_Image.png": "/Tejas_Assessment/static/media/Main_BG_Image.4c4a44d3312554e33fbc.png",
     "index.html": "/Tejas_Assessment/index.html",
-    "main.e6c13ad2.css.map": "/Tejas_Assessment/static/css/main.e6c13ad2.css.map",
-    "main.3e8bb869.js.map": "/Tejas_Assessment/static/js/main.3e8bb869.js.map",
+    "main.40fa2f36.css.map": "/Tejas_Assessment/static/css/main.40fa2f36.css.map",
+    "main.6e9647c1.js.map": "/Tejas_Assessment/static/js/main.6e9647c1.js.map",
     "453.6cc2ae2c.chunk.js.map": "/Tejas_Assessment/static/js/453.6cc2ae2c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.3e8bb869.js"
+    "static/css/main.40fa2f36.css",
+    "static/js/main.6e9647c1.js"
   ]
 }
