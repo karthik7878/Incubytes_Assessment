@@ -1,0 +1,26 @@
+.App {
+    background-image: url('../public/Main_BG_Image.png'); /* Add your image path here */
+    background-size: cover; /* Make sure it covers the entire area */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.border {
+    position: relative; /* Ensure the container has positioning */
+    z-index: 1; /* Bring the content above the background */
+  }
+  
+  /* Optional: Add a subtle animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .App {
+    animation: fadeIn 1s ease-in-out;
+  }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -7,6 +7,9 @@ function App() {
   const [exception, setException] = useState("");
   const [negativeNumbers, setNegativeNumbers] = useState([]);
 
+  useEffect(()=> {
+    console.log(negativeNumbers); //To avoid console warning
+  },[negativeNumbers]);
   const add = (numbers) => {
     if (numbers.trim() === "") {
       setSum(0);
@@ -49,7 +52,7 @@ function App() {
 
   return (
     <div className="App d-flex justify-content-center align-items-center" style={{height: '100vh'}}>
-      <div className="border p-4 bg-lightgoldenrodyellow" style={{ width: '400px', display: 'grid' }}>
+      <div className="border p-4 bg-lightgoldenrodyellow" style={{ width: '400px', display: 'grid', backgroundColor: '#ede6e6' }}>
         <h5 className="text-center fs-4">Sum of Numbers in String</h5>
         <div className="mb-3">
           <label htmlFor="textbox" className="form-label">Input String</label>
