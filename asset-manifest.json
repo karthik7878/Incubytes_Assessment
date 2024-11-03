@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Tejas_Assessment/static/css/main.40fa2f36.css",
-    "main.js": "/Tejas_Assessment/static/js/main.6e9647c1.js",
-    "static/js/453.6cc2ae2c.chunk.js": "/Tejas_Assessment/static/js/453.6cc2ae2c.chunk.js",
-    "static/media/Main_BG_Image.png": "/Tejas_Assessment/static/media/Main_BG_Image.4c4a44d3312554e33fbc.png",
-    "index.html": "/Tejas_Assessment/index.html",
-    "main.40fa2f36.css.map": "/Tejas_Assessment/static/css/main.40fa2f36.css.map",
-    "main.6e9647c1.js.map": "/Tejas_Assessment/static/js/main.6e9647c1.js.map",
-    "453.6cc2ae2c.chunk.js.map": "/Tejas_Assessment/static/js/453.6cc2ae2c.chunk.js.map"
+    "main.css": "/Incubytes_Assessment/static/css/main.26fd8c61.css",
+    "main.js": "/Incubytes_Assessment/static/js/main.429c2c27.js",
+    "static/js/453.cf9eb101.chunk.js": "/Incubytes_Assessment/static/js/453.cf9eb101.chunk.js",
+    "static/media/Main_BG_Image.png": "/Incubytes_Assessment/static/media/Main_BG_Image.4c4a44d3312554e33fbc.png",
+    "index.html": "/Incubytes_Assessment/index.html",
+    "main.26fd8c61.css.map": "/Incubytes_Assessment/static/css/main.26fd8c61.css.map",
+    "main.429c2c27.js.map": "/Incubytes_Assessment/static/js/main.429c2c27.js.map",
+    "453.cf9eb101.chunk.js.map": "/Incubytes_Assessment/static/js/453.cf9eb101.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40fa2f36.css",
-    "static/js/main.6e9647c1.js"
+    "static/css/main.26fd8c61.css",
+    "static/js/main.429c2c27.js"
   ]
 }
